@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@TaherXzo - Profil Gamer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2a 100%);
+            color: #fff;
+            font-family: 'Rajdhani', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 900px;
+            width: 100%;
+            background: rgba(10, 10, 26, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+            overflow: hidden;
+        }
+        
+        .profile-section {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid rgba(0, 238, 255, 0.3);
+        }
+        
+        .content-section {
+            flex: 2;
+            padding: 30px;
+        }
+        
+        .profile-pic img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid #00eeff;
+            box-shadow: 0 0 20px #00eeff;
+            object-fit: cover;
+        }
+        
+        .username {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 32px;
+            font-weight: 900;
+            margin: 15px 0 5px;
+            text-shadow: 0 0 10px #00eeff;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            color: #a0a0b8;
+            margin-bottom: 20px;
+        }
+        
+        .buttons-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            width: 100%;
+        }
+        
+        .gamer-btn {
+            background: rgba(20, 20, 40, 0.8);
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .gamer-btn:hover {
+            background: rgba(0, 238, 255, 0.2);
+            box-shadow: 0 0 10px rgba(0, 238, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px #00eeff;
+        }
+        
+        .status-container {
+            background: rgba(20, 20, 40, 0.5);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .status-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .music-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .music-btn {
+            background: rgba(0, 238, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .music-btn:hover {
+            background: rgba(0, 238, 255, 0.4);
+        }
+        
+        .track-info {
+            font-size: 14px;
+            color: #a0a0b8;
+        }
+        
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+            text-align: center;
+            width: 100%;
+        }
+        
+        /* Responsivitas */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .profile-section {
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 238, 255, 0.3);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <!-- Foto profil -->
+            <div class="profile-pic">
+                <img src="legend.png" alt="Legend I" onerror="this.src='https://via.placeholder.com/180x180/1a1a2a/00eeff?text=@TaherXzo'">
+            </div>
+            
+            <!-- Nama pengguna -->
+            <h1 class="username">@TaherXzo</h1>
+            
+            <!-- Tagline -->
+            <p class="tagline">💌 welcome | -rebox</p>
+            
+            <!-- Tombol -->
+            <div class="buttons-container">
+                <button class="gamer-btn" id="music-btn">
+                    <span>🎵</span>
+                    <span id="music-text">Play Music</span>
+                </button>
+                <button class="gamer-btn" onclick="openLink('https://wa.me/6283899609511?text=Halo+Bang👋🏻')">
+                    <span>📞</span>
+                    <span>Contact</span>
+                </button>
+                <button class="gamer-btn" onclick="openLink('https://saweria.co/TaherXzo')">
+                    <span>🌐</span>
+                    <span>Saweria</span>
+                </button>
+                <button class="gamer-btn" onclick="openLink('https://chat.whatsapp.com/IiZiA7VfnIn4icjRbOFlCY?mode=ac_t')">
+                    <span>💵</span>
+                    <span>Freelance</span>
+                </button>
+            </div>
+            
+            <div class="footer">Powered by @TaherXzo - 2025</div>
+        </div>
+        
+        <div class="content-section">
+            <h2>Gamer Profile</h2>
+            
+            <div class="status-container">
+                <div class="status-item">
+                    <span>Status:</span>
+                    <span style="color: #00eeff;">Online</span>
+                </div>
+                <div class="status-item">
+                    <span>Game Favorite:</span>
+                    <span>Mobile Legends</span>
+                </div>
+                <div class="status-item">
+                    <span>Rank:</span>
+                    <span>Mythic</span>
+                </div>
+            </div>
+            
+            <h2>Music Player</h2>
+            
+            <div class="status-container">
+                <div class="track-info" id="track-info">
+                    Now Playing: Track 1 - Ransom
+                </div>
+                
+                <div class="music-controls">
+                    <button class="music-btn" onclick="toggleMusic()" id="play-pause-btn">▶</button>
+                    <button class="music-btn" onclick="switchTrack()">⇄</button>
+                    <span class="track-info">Volume: </span>
+                    <input type="range" min="0" max="1" step="0.1" value="0.7" id="volume-slider">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="track1" src="ransom 1.mp3"></audio>
+    <audio id="track2" src="ransom 2.mp3"></audio>
+
+    <script>
+        let currentTrack = 1;
+        let isPlaying = false;
+        const track1 = document.getElementById("track1");
+        const track2 = document.getElementById("track2");
+        const musicBtn = document.getElementById("music-btn");
+        const playPauseBtn = document.getElementById("play-pause-btn");
+        const musicText = document.getElementById("music-text");
+        const trackInfo = document.getElementById("track-info");
+        const volumeSlider = document.getElementById("volume-slider");
+        
+        // Set volume awal
+        track1.volume = 0.7;
+        track2.volume = 0.7;
+        
+        // Update volume ketika slider diubah
+        volumeSlider.addEventListener('input', function() {
+            const volume = this.value;
+            track1.volume = volume;
+            track2.volume = volume;
+        });
+        
+        function toggleMusic() {
+            if (!isPlaying) {
+                if (currentTrack === 1) { 
+                    track1.play(); 
+                    trackInfo.textContent = "Now Playing: Track 1 - Ransom";
+                } else { 
+                    track2.play(); 
+                    trackInfo.textContent = "Now Playing: Track 2 - Ransom";
+                }
+                isPlaying = true;
+                musicText.textContent = "Stop Music";
+                playPauseBtn.textContent = "⏸";
+            } else {
+                if (currentTrack === 1) { 
+                    track1.pause(); 
+                } else { 
+                    track2.pause(); 
+                }
+                isPlaying = false;
+                musicText.textContent = "Play Music";
+                playPauseBtn.textContent = "▶";
+            }
+        }
+        
+        function switchTrack() {
+            // Hentikan track yang sedang diputar
+            if (isPlaying) {
+                if (currentTrack === 1) {
+                    track1.pause();
+                } else {
+                    track2.pause();
+                }
+            }
+            
+            // Ganti track
+            currentTrack = currentTrack === 1 ? 2 : 1;
+            
+            // Jika musik sedang diputar, putar track yang baru
+            if (isPlaying) {
+                if (currentTrack === 1) {
+                    track1.play();
+                    trackInfo.textContent = "Now Playing: Track 1 - Ransom";
+                } else {
+                    track2.play();
+                    trackInfo.textContent = "Now Playing: Track 2 - Ransom";
+                }
+            } else {
+                trackInfo.textContent = currentTrack === 1 ? 
+                    "Ready: Track 1 - Ransom" : "Ready: Track 2 - Ransom";
+            }
+        }
+        
+        // Event listener untuk tombol musik utama
+        musicBtn.addEventListener("click", toggleMusic);
+        
+        function openLink(url) { 
+            window.open(url, '_blank'); 
+        }
+        
+        // Handle ketika audio selesai diputar
+        track1.addEventListener('ended', function() {
+            if (currentTrack === 1 && isPlaying) {
+                switchTrack();
+                if (isPlaying) {
+                    toggleMusic();
+                    toggleMusic();
+                }
+            }
+        });
+        
+        track2.addEventListener('ended', function() {
+            if (currentTrack === 2 && isPlaying) {
+                switchTrack();
+                if (isPlaying) {
+                    toggleMusic();
+                    toggleMusic();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
